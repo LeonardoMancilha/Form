@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+:root{
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+body{
+    font-size: 1.3em;
+    font-family: 'Open Sans', sans-serif;
+    background: var(--red) url(Images/mobile.png) no-repeat;
+    background-size: cover;
+    padding: 5rem 2rem;
+}
+.container{
+    max-width: 330px;
+    margin: 0 auto;
+}
+.notice {
+    color: white;
+    text-align: center;
+    padding-bottom: 2.5rem;
+}
+.title{
+    padding: 1rem 0;
+}
+button{
+    display: block;
+}
+.sign-in{
+    margin: 2rem auto;
+    width: 100%;
+    background-color: var(--blue);
+    padding: 1rem 2rem;
+    font-size: larger;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    box-shadow: 0px 15px 5px 0px hsla(249deg 10% 26% / 50%);
+}
+form{
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 1rem;
+    box-shadow: 0px 15px 5px 0px hsl(249deg 10% 26% / 50%);
+}
+input{
+    display: block;
+    width: 100%;
+    margin: 0 0 0.5rem 0;
+    size: 20;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: thin solid var(--grayish-blue);
+    outline: none;
+    font-weight: 600;
+}
+input:focus{
+    border: 1px solid var(--blue);
+}
+input[type=submit]{
+    background: hsl(108, 61%, 58%);
+    border: 2px solid;
+    border-radius: 12px;
+    color: white;
+    text-transform: uppercase;
+}
+input[type=submit]:hover{
+    opacity: 0.7;
+    color: white;
+    cursor: pointer;
+}
+.Paragraph {
+    color: var(--grayish-blue);
+    display: block;
+    font-size: small;
+    text-align: center;
+}
+.Paragraph mark{
+    background: none;
+    color: var(--red);
+    font-weight: bold;
+}
+
+@media screen and (min-width: 650px) {
+    body{
+        background: var(--red) url(Images/desktop.png) no-repeat;
+    }
+    .container{
+        display: flex;
+        max-width: 1135px;
+        justify-content: center;
+    }
+    .notice{
+        flex-basis: 50%;
+        padding: 0;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        text-align: start;
+    }
+    .title{
+        font-size: 6vmin;
+    }
+    .form{
+        flex-basis: 47%;
+        max-width: 435px;
+    }
+}
